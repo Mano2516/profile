@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color : #DAC5A7 ;
+    --second-color : rgba(218, 197, 167, .6) ;
+    --back-ground-blur :rgba(218, 197, 167, 0.05);
+    --main-transision : .3s ;
+    --back-ground-item : rgba(218, 197, 167, .05);
+    --border-item : rgba(218, 197, 167, .15);
+    --background-card : #181716 ;
+    --border-card : #343230 ;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px ;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@font-face {
+    src: url(../fonts/chillax/Fonts/WEB/fonts/Chillax-Medium.ttf);
+    font-family: chill-medium;
+}
+@font-face {
+    src: url(../fonts/satoshi/Fonts/WEB/fonts/Satoshi-Light.ttf);
+    font-family: sat-light;
+}
+@font-face {
+    src: url(../fonts/gambetta/Fonts/WEB/fonts/Gambetta-LightItalic.ttf);
+    font-family: gam-light-i;
+}
+@font-face {
+    src: url(../fonts/chillax/Fonts/WEB/fonts/Chillax-Light.ttf);
+    font-family: chil-light ;
+}
+@font-face {
+    src: url(../fonts/satoshi/Fonts/WEB/fonts/Satoshi-Regular.ttf);
+    font-family: sat-reg;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+body {
+    background-color: #0E0E0E;
+}
+.header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.header .container {
+    position: fixed;
+    top : 48px ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: var(--back-ground-blur);
+    width: 590px;
+    padding-left: 24px;
+    padding-right: 12px;
+    padding-bottom: 17px;
+    padding-top: 17px;
+    background-color: var(--back-ground-blur);
+    border : 1px solid rgb(52, 51, 48) ;
+    z-index: 100;
+    height: 63px;
+    backdrop-filter: blur(30px);
+}
+.logo a {
+    color: var(--main-color);
+    margin-right: 32px;
+    font-family: chill-medium;
+    font-size: 23px;
+}
+
+.container ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.container ul li a {
+    display: block;
+    text-decoration: none;
+    margin-right: 32px;
+    color: var(--main-color);
+    font-family: sat-light;
+    font-size: 16px;
+    position: relative;
+}
+.container ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--main-color);
+    transition: var(--main-transision);
+}
+.container ul li a:hover::after {
+    width: 108%;
+}
+.container .button a {
+    background-color: var(--main-color);
+    color: #0E0E0E;
+    padding: 12px 15px;
+    font-family: sat-light;
+}
+.body {
+    padding-top: 100px;
+    padding-left: 64px;
+    padding-right: 64px;
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+.body .leftside {
+    flex-basis: 30%;
+}
+.body .leftside .image {
+    position: sticky;
+    top: 100px;
+}
+.body .leftside .image img {
+    max-width: 100%;
+}
+.body .rightside  {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.body .rightside .upper .up{
+    color: var(--main-color);
+    font-size: 128px;
+    font-family: sat-light;
+}
+.body .rightside .upper  .down {
+    font-family: gam-light-i;
+    font-size: 128px;
+    color: var(--main-color);
+    margin-top: -20px;
+}
+.body .rightside .upper p {
+    font-size: 22px;
+    color: var(--second-color);
+    font-family: chil-light;
+    width: 590px;
+}
+    .arrow {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    transform: translate(-50% ,-50%);
+}
+    .arrow img {
+    display: inline;
+    position: absolute;
+    border: 1px solid rgb(52, 51, 48);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 40px;
+    left: -54px;
+    top: -16px;
+    background-color: var(--back-ground-blur);
+}
+    .arrow .link-arr a p {
+    display: inline;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    font-family: sat-reg;
+    color: var(--main-color);
+}
+.body .rightside .content {
+    padding-top: 200px;
+}
+.body .rightside .data {
+    padding: 50px ;
+    background-color: var(--background-card);
+    border-radius: 4px;
+    border: 1px solid var(--border-card);
+}
+.body .rightside .data .name {
+    color: var(--second-color);
+    font-family: sat-reg;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+.body .rightside .data .title {
+    font-family: sat-light;
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: var(--main-color);
+    width: 800px;
+    margin-bottom: 10px;
+}
+.body .rightside .data .one {
+    font-family: chil-light;
+    font-size: 16px;
+    color: var(--main-color);
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+.body .rightside .data .two {
+    font-family: chil-light;
+    font-size: 16px;
+    color: var(--main-color);
+    line-height: 160%;
+    margin-bottom: 25px;
+}
+.body .rightside .data .image {
+    position: relative;
+}
+.body .rightside .data .image img {
+    max-width: 100%;
+}
+.body .rightside .data .image .overlay {
+    background-image: url('../Img/layout.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .1;
+    width: 100%;
+    height: 100%;
+}
+.body .rightside .awards {
+    background-color: var(--background-card);
+    border-radius: 4px;
+    border: 1px solid var(--border-card);
+    margin-top: 30px;
+    padding: 50px;
+}
+.body .rightside .awards .tit {
+    color: var(--second-color);
+    font-family: sat-reg;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+.body .rightside .awards .line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 45px;
+}
+.body .rightside .awards .final {
+    margin-bottom: 0;
+}
+.body .rightside .awards .line:not(.final)::after {
+    position: absolute;
+    content: '';
+    background-color: var(--border-card);
+    width: 100%;
+    height: 1px;
+    bottom: -15px;
+}
+.body .rightside .awards .line .dec {
+    font-family: sat-light;
+    font-size: 20px ;
+    color: var(--main-color);
+}
+.body .rightside .awards .line .date {
+    font-family: sat-reg;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: var(--main-color);
+}
+.banner {
+    padding-top: 150px;
+}
+.banner .img  {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer {
+    background-color: var(--background-card);
+    padding-top: 100px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-bottom: 60px;
+}
+.footer .text {
+    text-align: center;
+    color: var(--main-color);
+}
+.footer .text .mind {
+    font-family: sat-reg;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    line-height: 130%;
+}
+.footer .text .let {
+    font-family: sat-light;
+    font-size: 128px;
+    line-height: 110%;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+.footer .text .web {
+    font-family: gam-light-i;
+    font-size: 128px;
+    line-height: 110%;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+.footer .text .pre {
+    width: 500px;
+    font-size: 20px;
+    font-family: chil-light;
+    line-height: 160%;
+    letter-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.footer .text .link {
+    margin-top: 40px;
+}
+.footer .text .link  a {
+    color: #0E0E0E;
+    padding: 10px 25px;
+    background-color: var(--main-color);
+    font-family: sat-reg;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+.footer .text .link  a i {
+    transform: rotateZ(400deg);
+    transition-delay: .1s;
+    transition-duration: var(--main-transision);
+    margin-left: 5px;
+}
+.footer .text .link:hover a i {
+    transform: rotateZ(450deg);
+}
+.footer .links {
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+}
+.footer .links {
+    padding-top: 160px;
+}
+.footer .links .social .title {
+    font-family: chill-medium;
+    font-size: 23px;
+    color: var(--main-color);
+    margin-bottom: 35px;
+}
+.footer .links .social ul {
+    list-style: none;
+}
+.footer .links .social ul li {
+    margin-bottom: 30px;
+}
+.footer .links .social ul li a {
+    color: var(--main-color);
+    font-family: sat-reg;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
+.footer .links .social ul li a  .con  {
+    display: flex;
+    align-items: center;
+}
+.footer .links .social ul li a  .con svg {
+    margin-right: 10px;
+}
+.footer .links .col .lable {
+    font-family: sat-light;
+    font-size: 20px;
+    color: var(--main-color);
+    letter-spacing: 0px;
+    line-height: 120%;
+    margin-bottom: 35px;
+}
+.footer .links .col ul {
+    list-style: none;
+}
+.footer .links .col ul li {
+    margin-bottom: 30px;
+    transition: var(--main-transision);
+}
+.footer .links .col ul li  a {
+    color: var(--second-color);
+    font-family: sat-reg;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+.footer .links .col ul li .active {
+    color: var(--main-color);
+}
+.footer .links .col ul li:hover a {
+    color: var(--main-color);
+}
+.footer .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--second-color);
+}
+.footer .foot .copy {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: sat-reg;
+    letter-spacing: 1.5px;
+}
+.footer .foot .copy span {
+    font-family: chill-medium;
+    font-size: 23px;
+    color: var(--main-color);
+}
+.footer .foot .toup a {
+    display: flex;
+    align-items: center;
+}
+.footer .foot .toup a {
+    color: var(--second-color);
+    font-family: sat-reg;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+}
+
+.footer .foot .toup a svg {
+    margin-left: 10px;
+}

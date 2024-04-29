@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color : #DAC5A7 ;
+    --second-color : rgba(218, 197, 167, .6) ;
+    --back-ground-blur :rgba(218, 197, 167, 0.05);
+    --main-transision : .3s ;
+    --back-ground-item : rgba(218, 197, 167, .05);
+    --border-item : rgba(218, 197, 167, .15);
+    --background-card : #181716 ;
+    --border-card : #343230 ;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px ;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@font-face {
+    src: url(../fonts/chillax/Fonts/WEB/fonts/Chillax-Medium.ttf);
+    font-family: chill-medium;
+}
+@font-face {
+    src: url(../fonts/satoshi/Fonts/WEB/fonts/Satoshi-Light.ttf);
+    font-family: sat-light;
+}
+@font-face {
+    src: url(../fonts/gambetta/Fonts/WEB/fonts/Gambetta-LightItalic.ttf);
+    font-family: gam-light-i;
+}
+@font-face {
+    src: url(../fonts/chillax/Fonts/WEB/fonts/Chillax-Light.ttf);
+    font-family: chil-light ;
+}
+@font-face {
+    src: url(../fonts/satoshi/Fonts/WEB/fonts/Satoshi-Regular.ttf);
+    font-family: sat-reg;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+body {
+    background-color: #0E0E0E;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    text-align: center;
+}
+.content .one {
+    font-family: sat-reg;
+    font-size: 13px;
+    color: var(--second-color);
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+.content .two {
+    font-family: sat-light;
+    font-size: 64px;
+    color: var(--main-color);
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+.content a {
+    color: #0E0E0E;
+    font-family: sat-reg;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+}
